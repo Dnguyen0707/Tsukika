@@ -9,5 +9,8 @@
         <module name="Tsukika" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Tsukika" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
