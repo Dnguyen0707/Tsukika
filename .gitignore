@@ -1,4 +1,11 @@
-/.idea
-/.gradle
+.idea
+.gradle
+build
+out
+*.iml
+logs
+tmp
+log/
 
-*.txt
+
+Tsukika Key.txt

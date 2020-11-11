@@ -2,6 +2,9 @@ package com.weebletflowers.tsukika;
 
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
+import com.weebletflowers.tsukika.NewMember.Join;
+import com.weebletflowers.tsukika.UserCommands.Interactions.GoodMorning;
+import com.weebletflowers.tsukika.UserCommands.Interactions.GoodNight;
 import com.weebletflowers.tsukika.UserCommands.SelfRole;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -44,7 +47,7 @@ public class Launcher extends ListenerAdapter
         builder.setHelpWord("sendhelp");
         builder.setOwnerId(ownerID);
         builder.setPrefix("-");
-        builder.setAlternativePrefix("$");
+        builder.setAlternativePrefix(";");
 
         //add commmands
         commands();
@@ -56,6 +59,17 @@ public class Launcher extends ListenerAdapter
 
     private static void commands()
     {
+        //New Member
+        builder.addCommands(new Join());
+
+        //User Command
         builder.addCommands(new SelfRole());
+
+        //Interaction
+        builder.addCommands(
+                new GoodMorning(),
+                new GoodNight()
+        );
+
     }
 }

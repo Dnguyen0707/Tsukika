@@ -15,6 +15,7 @@ public class SelfRole extends Command
         this.aliases = new String[]{"getrole"};
         this.help = "give yourself a role";
         this.arguments = "<role>";
+        this.requiredRole = "Weeb";
     }
 
     @Override
@@ -43,8 +44,7 @@ public class SelfRole extends Command
             }
         }
         event.getGuild().addRoleToMember(user, role).complete();
-        event.getChannel().sendMessage("Got Chu");
+        event.reply("Got Chu");
     }
-
 
 }
