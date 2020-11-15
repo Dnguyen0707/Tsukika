@@ -1,4 +1,4 @@
-package com.weebletflowers.tsukika.GuildStuff.SINoALICE.Grandmaster;
+package com.weebletflowers.tsukika.GuildStuff.SINoALICE.Submaster;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.jagrosh.jdautilities.commons.utils.FinderUtil;
@@ -10,14 +10,13 @@ import net.dv8tion.jda.api.entities.User;
 
 import java.awt.*;
 import java.util.List;
-
-public class SAGMJoin extends Command
+public class SASMJoin extends Command
 {
-    public SAGMJoin()
+    public SASMJoin()
     {
-        this.name = "SAGMJoin";
+        this.name = "SASMJoin";
         this.arguments = "<Member>";
-        this.requiredRole = "Sinoalice Grandmaster";
+        this.requiredRole = "Sinoalice Submaster";
         this.hidden = true;
     }
 
