@@ -34,7 +34,7 @@ public class Join extends Command
             role = found.get(0);
         }
 
-        event.getMessage().delete().queue();
+        event.getMessage().delete().complete();
 
         if (event.getTextChannel().equals(event.getGuild().getDefaultChannel()))
         {

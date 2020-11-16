@@ -2,12 +2,10 @@ package com.weebletflowers.tsukika;
 
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
-import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Grandmaster.SAGMJoin;
-import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Grandmaster.SAGMKick;
+import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Masters.SAJoin;
+import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Masters.SAKick;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.AFKReport;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.CoopInvite;
-import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Submaster.SASMJoin;
-import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Submaster.SASMKick;
 import com.weebletflowers.tsukika.NewMember.Join;
 import com.weebletflowers.tsukika.UserCommands.Interactions.GoodMorning;
 import com.weebletflowers.tsukika.UserCommands.Interactions.GoodNight;
@@ -79,10 +77,8 @@ public class Launcher extends ListenerAdapter
 
         //Sinoalice
         builder.addCommands(
-                new SAGMJoin(),
-                new SASMJoin(),
-                new SAGMKick(),
-                new SASMKick(),
+                new SAJoin(),
+                new SAKick(),
                 new AFKReport(),
                 new CoopInvite()
         );
