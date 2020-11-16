@@ -4,6 +4,8 @@ import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Grandmaster.SAGMJoin;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Grandmaster.SAGMKick;
+import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.AFKReport;
+import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.CoopInvite;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Submaster.SASMJoin;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Submaster.SASMKick;
 import com.weebletflowers.tsukika.NewMember.Join;
@@ -80,7 +82,9 @@ public class Launcher extends ListenerAdapter
                 new SAGMJoin(),
                 new SASMJoin(),
                 new SAGMKick(),
-                new SASMKick()
+                new SASMKick(),
+                new AFKReport(),
+                new CoopInvite()
         );
     }
 }

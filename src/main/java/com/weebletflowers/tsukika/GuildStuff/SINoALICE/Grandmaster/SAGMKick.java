@@ -44,10 +44,18 @@ public class SAGMKick extends Command
                 String[] arg = event.getArgs().split("\\s+");
                 int reason = 0;
 
-                //check for arguments TODO: add reason explaination
+                //check for arguments
                 if (arg.length == 1)
                 {
-                    event.reply("Please state what's the reason for expel");
+                    EmbedBuilder embed = new EmbedBuilder();
+                    embed.setTitle("Please state what's the reason for expel");
+                    embed.setDescription(
+                            "1. Offline for more than 3 days\n" +
+                            "2. Constantly not joining colosseum\n" +
+                            "3. See no improvement"
+                    );
+                    embed.setFooter("Just give me the number");
+                    event.reply(embed.build());
                 }
                 else
                 {
