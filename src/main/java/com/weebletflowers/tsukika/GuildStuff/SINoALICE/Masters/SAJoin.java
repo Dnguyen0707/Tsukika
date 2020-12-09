@@ -33,9 +33,11 @@ public class SAJoin extends Command
             {
                 try
                 {
-                    Member member = event.getMessage().getMentionedMembers().get(0);
+                    Member member =
+                            event.getMessage().getMentionedMembers().get(0);
                     List<Role> found =
-                            FinderUtil.findRoles("Sinoalice Member", event.getGuild());
+                            FinderUtil.findRoles("Sinoalice Member",
+                                    event.getGuild());
                     Role role = found.get(0);
 
                     event.getGuild().addRoleToMember(member, role).complete();
@@ -61,7 +63,8 @@ public class SAJoin extends Command
                     message.setImage("https://tinyurl.com/y5mf39cm");
 
                     event.reply("Added new member");
-                    sendMessage(event.getMessage().getMentionedUsers().get(0), message.build());
+                    sendMessage(event.getMessage().getMentionedUsers().get(0),
+                            message.build());
                 }
                 catch (Exception e)
                 {
@@ -83,4 +86,5 @@ public class SAJoin extends Command
                 .flatMap(channel -> channel.sendMessage(content))
                 .queue();
     }
+
 }

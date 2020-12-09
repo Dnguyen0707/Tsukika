@@ -24,7 +24,8 @@ public class AFKReport extends Command
 
             EmbedBuilder embed = new EmbedBuilder();
             embed.setTitle("AFK Notice");
-            embed.setDescription(event.getAuthor().getName() + " will be gone for today's collo");
+            embed.setDescription(event.getAuthor().getName() +
+                    " will be gone for today's collo");
             embed.setColor(Color.cyan);
 
             event.reply(embed.build());
@@ -34,7 +35,6 @@ public class AFKReport extends Command
             //delete typed commanded
             event.getMessage().delete().complete();
         }
-
 
 
     }

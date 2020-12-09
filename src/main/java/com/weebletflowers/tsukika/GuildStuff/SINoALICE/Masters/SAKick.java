@@ -34,9 +34,11 @@ public class SAKick extends Command
             {
                 try
                 {
-                    Member member = event.getMessage().getMentionedMembers().get(0);
+                    Member member =
+                            event.getMessage().getMentionedMembers().get(0);
 
-                    List<Role> found = FinderUtil.findRoles("Sinoalice Member", event.getGuild());
+                    List<Role> found = FinderUtil
+                            .findRoles("Sinoalice Member", event.getGuild());
                     Role role = found.get(0);
 
                     String[] arg = event.getArgs().split("\\s+");
@@ -46,7 +48,8 @@ public class SAKick extends Command
                     if (arg.length == 1)
                     {
                         EmbedBuilder embed = new EmbedBuilder();
-                        embed.setTitle("Please state what's the reason for expel");
+                        embed.setTitle(
+                                "Please state what's the reason for expel");
                         embed.setDescription(
                                 "1. Offline for more than 3 days\n" +
                                         "2. Constantly not joining colosseum\n" +
@@ -74,10 +77,12 @@ public class SAKick extends Command
                         switch (reason)
                         {
                             case 1:
-                                embed.setDescription("Offline for more than 3 days");
+                                embed.setDescription(
+                                        "Offline for more than 3 days");
                                 break;
                             case 2:
-                                embed.setDescription("Constantly not joining colosseum");
+                                embed.setDescription(
+                                        "Constantly not joining colosseum");
                                 break;
                             case 3:
                                 embed.setDescription("See no improvement");
@@ -85,15 +90,20 @@ public class SAKick extends Command
 
                         }
 
-                        embed.setFooter("Message Guildmaster or Submaster for more info");
+                        embed.setFooter(
+                                "Message Guildmaster or Submaster for more info");
 
                         //send to that person DM
-                        sendMessage(event.getMessage().getMentionedUsers().get(0), embed.build());
+                        sendMessage(
+                                event.getMessage().getMentionedUsers().get(0),
+                                embed.build());
 
                         //let gm/sm know
-                        event.getGuild().removeRoleFromMember(member, role).complete();
+                        event.getGuild().removeRoleFromMember(member, role)
+                                .complete();
                         event.getMessage().delete().complete();
-                        event.reply("I have strip the role from " + member.getNickname());
+                        event.reply("I have strip the role from " +
+                                member.getNickname());
                     }
                 }
                 catch (Exception e)
@@ -107,15 +117,13 @@ public class SAKick extends Command
         {
             event.getMessage().delete().complete();
         }
-
-
     }
 
     private void sendMessage(User user, MessageEmbed content)
     {
-            user.openPrivateChannel()
-                    .flatMap(channel -> channel.sendMessage(content))
-                    .queue();
+        user.openPrivateChannel()
+                .flatMap(channel -> channel.sendMessage(content))
+                .queue();
     }
 
 }

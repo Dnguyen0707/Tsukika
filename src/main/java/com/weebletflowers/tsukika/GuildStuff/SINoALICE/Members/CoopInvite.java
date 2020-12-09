@@ -23,14 +23,17 @@ public class CoopInvite extends Command
             //delete typed commanded
             event.getMessage().delete().complete();
 
-            Role role = event.getGuild().getRolesByName("Sinoalice Member", true).get(0);
+            Role role =
+                    event.getGuild().getRolesByName("Sinoalice Member", true)
+                            .get(0);
 
             EmbedBuilder embed = new EmbedBuilder();
             embed.setTitle("Co-op Notice");
             embed.setColor(Color.ORANGE);
             embed.setDescription(
                     role.getAsMention() + " | " +
-                            event.getAuthor().getName() + " using going to run some co-op");
+                            event.getAuthor().getName() +
+                            " going to run some co-op");
 
             event.reply(embed.build());
         }
@@ -41,4 +44,5 @@ public class CoopInvite extends Command
         }
 
     }
+
 }

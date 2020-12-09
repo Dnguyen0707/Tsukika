@@ -2,14 +2,16 @@ package com.weebletflowers.tsukika;
 
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
+import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Masters.SAJoin;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Masters.SAKick;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.AFKReport;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.CoopInvite;
 import com.weebletflowers.tsukika.NewMember.Join;
+import com.weebletflowers.tsukika.UserCommands.GuildRequest.GuildApply;
+import com.weebletflowers.tsukika.UserCommands.GuildRequest.GuildOnly;
 import com.weebletflowers.tsukika.UserCommands.Interactions.GoodMorning;
 import com.weebletflowers.tsukika.UserCommands.Interactions.GoodNight;
-import com.weebletflowers.tsukika.UserCommands.SelfRole;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -23,6 +25,7 @@ import java.util.Scanner;
 public class Launcher extends ListenerAdapter
 {
     private static CommandClientBuilder builder;
+    private static EventWaiter waiter;
 
     public static void main(String[] args) throws LoginException
     {
@@ -40,11 +43,14 @@ public class Launcher extends ListenerAdapter
         catch (FileNotFoundException e)
         {
             System.out.println("Don't see file");
-            System.exit(-1);
+            System.exit(- 1);
         }
 
         //create jda
         JDA jda = JDABuilder.createDefault(token).build();
+
+        // define an eventwaiter
+        waiter = new EventWaiter();
 
         //setting builder
         builder = new CommandClientBuilder();
@@ -59,6 +65,7 @@ public class Launcher extends ListenerAdapter
         //connect
         CommandClient client = builder.build();
         jda.addEventListener(client);
+        jda.addEventListener(waiter);
     }
 
     private static void commands()
@@ -67,7 +74,10 @@ public class Launcher extends ListenerAdapter
         builder.addCommands(new Join());
 
         //User Command
-        builder.addCommands(new SelfRole());
+        builder.addCommands(
+                new GuildOnly(),
+                new GuildApply(waiter)
+        );
 
         //Interaction
         builder.addCommands(
@@ -83,4 +93,5 @@ public class Launcher extends ListenerAdapter
                 new CoopInvite()
         );
     }
+
 }
