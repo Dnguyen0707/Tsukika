@@ -8,10 +8,9 @@ import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Masters.SAKick;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.AFKReport;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.CoopInvite;
 import com.weebletflowers.tsukika.NewMember.Join;
+import com.weebletflowers.tsukika.JasioneCommands.Mute;
 import com.weebletflowers.tsukika.UserCommands.GuildRequest.GuildApply;
 import com.weebletflowers.tsukika.UserCommands.GuildRequest.GuildOnly;
-import com.weebletflowers.tsukika.UserCommands.Interactions.GoodMorning;
-import com.weebletflowers.tsukika.UserCommands.Interactions.GoodNight;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -79,18 +78,17 @@ public class Launcher extends ListenerAdapter
                 new GuildApply(waiter)
         );
 
-        //Interaction
-        builder.addCommands(
-                new GoodMorning(),
-                new GoodNight()
-        );
-
         //Sinoalice
         builder.addCommands(
                 new SAJoin(),
                 new SAKick(),
                 new AFKReport(),
                 new CoopInvite()
+        );
+
+        //Jasione Commands
+        builder.addCommands(
+                new Mute()
         );
     }
 

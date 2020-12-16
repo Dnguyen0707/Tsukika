@@ -19,7 +19,7 @@ public class AFKReport extends Command
     {
         if (event.getChannel().getName().equalsIgnoreCase("guild-chat"))
         {
-            //delete typed commanded
+            //delete typed command
             event.getMessage().delete().complete();
 
             EmbedBuilder embed = new EmbedBuilder();

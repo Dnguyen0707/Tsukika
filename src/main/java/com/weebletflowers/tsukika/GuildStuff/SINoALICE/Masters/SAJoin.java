@@ -52,9 +52,8 @@ public class SAJoin extends Command
                             "Now that you're in our guild, prepare for a fight everyday :)\n" +
                                     "There are couple rules that you should follow since we're semi-competitive\n\n" +
                                     "```\n" + "Rule\n" + "```\n" +
-                                    "1. Offline for more than 3 days will result to kick unless report to grandmaster or submaster\n" +
-                                    "2. Not joining colosseum for more than 3 days will result to kick unless report to grandmaster or submaster\n" +
-                                    "3. Constantly not joining colosseum will result to kick.\n \n" +
+                                    "1. Offline for more than 5 days will result to kick unless report to grandmaster or submaster\n" +
+                                    "2. Constantly not joining colosseum will result to kick.\n \n" +
                                     "We all like to have fun playing the guild war, but it won't be fun for anyone if you keep being afk without telling us\n" +
                                     "If you forget the rule you can just check the guild-information channel"
                     );

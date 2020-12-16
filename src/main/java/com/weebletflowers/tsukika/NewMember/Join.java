@@ -22,7 +22,7 @@ public class Join extends Command
     {
         Member user = event.getGuild().getMember(event.getAuthor());
 
-        List<Role> found = FinderUtil.findRoles("weeb", event.getGuild());
+        List<Role> found = FinderUtil.findRoles("Weeblet Seedlet", event.getGuild());
         Role role = found.get(0);
         //SHOULD NEVER HAPPENED LMAO
         if (found.isEmpty())

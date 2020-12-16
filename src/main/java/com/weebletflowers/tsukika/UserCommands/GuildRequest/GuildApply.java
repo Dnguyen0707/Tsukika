@@ -16,7 +16,7 @@ public class GuildApply extends Command
         this.waiter = waiter;
         this.name = "GuildApply";
         this.help = "Applying for the guild that you want";
-        this.requiredRole = "weeb";
+        this.requiredRole = "Weeblet Seedlet";
         this.arguments = "<game>";
     }
 
@@ -52,7 +52,6 @@ public class GuildApply extends Command
         TextChannel guildchannel = event.getGuild()
                 .getTextChannelsByName("sinoalice-application", true).get(0);
 
-        //TODO making so it asked what is the user stats
         event.reply("Please fill in the following detail in one message, don't type the <>.\n" + "Role: <Vanguard, Sorc, Min, Healer>\n" + "Point: <Main set point>");
 
         waiter.waitForEvent(GuildMessageReceivedEvent.class,

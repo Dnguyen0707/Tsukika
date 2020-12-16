@@ -78,7 +78,7 @@ public class SAKick extends Command
                         {
                             case 1:
                                 embed.setDescription(
-                                        "Offline for more than 3 days");
+                                        "Offline for more than 5 days");
                                 break;
                             case 2:
                                 embed.setDescription(

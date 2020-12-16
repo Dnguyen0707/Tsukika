@@ -11,7 +11,6 @@ public class GuildOnly extends Command
     {
         this.name = "GuildOnly";
         this.help = "to show only guild chat, only do this if you're in the guild";
-
     }
 
     @Override
@@ -20,7 +19,7 @@ public class GuildOnly extends Command
         event.getMessage().delete().complete();
 
         List<Role> count = event.getMember().getRoles();
-        List<Role> role = event.getGuild().getRolesByName("weeb", true);
+        List<Role> role = event.getGuild().getRolesByName("Weeblet Seedlet", true);
         Member author = event.getGuild().getMember(event.getAuthor());
 
         if (count.size() == 1)
