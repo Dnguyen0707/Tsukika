@@ -7,6 +7,8 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '5.2.0'
 }
 
+mainClassName = 'com.weebletflowers.tsukika.Launcher'
+
 group 'com.weebletflowers'
 version '1.0-SNAPSHOT'
 
