@@ -91,7 +91,7 @@ public class SAKick extends Command
                         }
 
                         embed.setFooter(
-                                "Message Guildmaster or Submaster for more info");
+                                "Message Guildmaster or Recuit for more info");
 
                         //send to that person DM
                         sendMessage(

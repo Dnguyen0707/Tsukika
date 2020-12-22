@@ -58,7 +58,7 @@ public class SAJoin extends Command
                                     "If you forget the rule you can just check the guild-information channel"
                     );
                     message.setFooter(
-                            "Don't hesitate to contact Guildmaster or Submaster if you have concern/questions");
+                            "Don't hesitate to contact Guildmaster or Recuit if you have concern/questions");
                     message.setImage("https://tinyurl.com/y5mf39cm");
 
                     event.reply("Added new member");

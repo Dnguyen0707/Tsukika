@@ -36,13 +36,12 @@ public class Join extends Command
 
         event.getMessage().delete().complete();
 
-        if (event.getTextChannel().equals(event.getGuild().getDefaultChannel()))
-        {
-            event.getGuild().addRoleToMember(user, role).complete();
-            String rawMessage = joinMessage();
 
-            event.reply(rawMessage.replace("[member]", user.getAsMention()));
-        }
+        event.getGuild().addRoleToMember(user, role).complete();
+        String rawMessage = joinMessage();
+
+        event.reply(rawMessage.replace("[member]", user.getAsMention()));
+
     }
 
     //TODO change this so it fit character

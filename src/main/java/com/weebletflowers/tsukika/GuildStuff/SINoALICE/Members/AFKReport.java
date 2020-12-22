@@ -2,6 +2,7 @@ package com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.Member;
 
 import java.awt.*;
 
@@ -22,9 +23,11 @@ public class AFKReport extends Command
             //delete typed command
             event.getMessage().delete().complete();
 
+            Member member = event.getGuild().getMember(event.getAuthor());
+
             EmbedBuilder embed = new EmbedBuilder();
             embed.setTitle("AFK Notice");
-            embed.setDescription(event.getAuthor().getName() +
+            embed.setDescription(member.getNickname() +
                     " will be gone for today's collo");
             embed.setColor(Color.cyan);
 

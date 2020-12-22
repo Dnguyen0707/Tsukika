@@ -6,6 +6,7 @@ import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Masters.SAJoin;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Masters.SAKick;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.AFKReport;
+import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.ColosseumAlert;
 import com.weebletflowers.tsukika.GuildStuff.SINoALICE.Members.CoopInvite;
 import com.weebletflowers.tsukika.NewMember.Join;
 import com.weebletflowers.tsukika.JasioneCommands.Mute;
@@ -83,7 +84,13 @@ public class Launcher extends ListenerAdapter
                 new SAJoin(),
                 new SAKick(),
                 new AFKReport(),
-                new CoopInvite()
+                new CoopInvite(),
+                new ColosseumAlert()
+        );
+
+        //Azur Lane
+        builder.addCommands(
+
         );
 
         //Jasione Commands
