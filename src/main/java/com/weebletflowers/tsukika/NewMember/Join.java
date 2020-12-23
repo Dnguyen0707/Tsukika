@@ -2,7 +2,6 @@ package com.weebletflowers.tsukika.NewMember;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.jagrosh.jdautilities.commons.utils.FinderUtil;
-import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Role;
 
 import java.util.List;
@@ -14,13 +13,14 @@ public class Join extends Command
     {
         this.name = "yahallo";
         this.help = "Accepting the rules";
-        this.hidden = true;
     }
 
     @Override
     protected void execute(CommandEvent event)
     {
-        Member user = event.getGuild().getMember(event.getAuthor());
+        event.getMessage().delete().complete();
+
+        Long user = event.getAuthor().getIdLong();
 
         List<Role> found = FinderUtil.findRoles("Weeblet Seedlet", event.getGuild());
         Role role = found.get(0);
@@ -34,14 +34,11 @@ public class Join extends Command
             role = found.get(0);
         }
 
-        event.getMessage().delete().complete();
-
 
         event.getGuild().addRoleToMember(user, role).complete();
         String rawMessage = joinMessage();
 
-        event.reply(rawMessage.replace("[member]", user.getAsMention()));
-
+        event.reply(rawMessage.replace("[member]", event.getAuthor().getAsMention()));
     }
 
     //TODO change this so it fit character
