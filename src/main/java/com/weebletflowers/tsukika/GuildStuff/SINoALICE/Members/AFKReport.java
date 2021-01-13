@@ -38,8 +38,6 @@ public class AFKReport extends Command
             //delete typed commanded
             event.getMessage().delete().complete();
         }
-
-
     }
 
 }

@@ -5,7 +5,6 @@ import com.jagrosh.jdautilities.commons.utils.FinderUtil;
 import net.dv8tion.jda.api.entities.Role;
 
 import java.util.List;
-import java.util.Random;
 
 public class Join extends Command
 {
@@ -13,52 +12,40 @@ public class Join extends Command
     {
         this.name = "yahallo";
         this.help = "Accepting the rules";
+        this.arguments = "<game>";
     }
 
     @Override
     protected void execute(CommandEvent event)
     {
-        event.getMessage().delete().complete();
-
-        Long user = event.getAuthor().getIdLong();
-
-        List<Role> found = FinderUtil.findRoles("Weeblet Seedlet", event.getGuild());
-        Role role = found.get(0);
-        //SHOULD NEVER HAPPENED LMAO
-        if (found.isEmpty())
+        if (event.getChannel().getName().equalsIgnoreCase("new-members"))
         {
-            event.replyError("I don't see the role. Type something legit");
+            long user = event.getAuthor().getIdLong();
+            event.getMessage().delete().complete();
+
+            //Add Seedlet
+            List<Role> found = FinderUtil.findRoles("Weeblet Seedlet", event.getGuild());
+            Role role = found.get(0);
+            event.getGuild().addRoleToMember(user, role).complete();
+
+            //if user is from the SinoAlice guild
+            if (event.getArgs().equals("SinoAlice"))
+            {
+
+                List<Role> guildrole = FinderUtil.findRoles("SinoAlice Member", event.getGuild());
+                Role SAMember = guildrole.get(0);
+                event.getGuild().addRoleToMember(user, SAMember).complete();
+
+                event.reply(event.getAuthor().getAsMention() + " is the new SinoAlice member that join us today");
+            }
+            else
+            {
+                event.reply("Welcome to the Weeblet Hanabusa " + event.getAuthor().getAsMention() + "!");
+            }
         }
         else
         {
-            role = found.get(0);
+            event.getMessage().delete().complete();
         }
-
-
-        event.getGuild().addRoleToMember(user, role).complete();
-        String rawMessage = joinMessage();
-
-        event.reply(rawMessage.replace("[member]", event.getAuthor().getAsMention()));
-    }
-
-    //TODO change this so it fit character
-    private String joinMessage()
-    {
-        String[] messages = {
-                "[member] joined, go and compliment their hair",
-                "Yahallo [member]! Welcome to the Weeblet",
-                "It's not like we need you here [member], b-baka!",
-                "You think it was a bot, but it was me, [member]",
-                "My current being is due to [member]'s presence",
-                "To suffer at the hands of [member] is my ideal",
-                "[member] joined the fleet, get ready for sorties",
-                "[member] is the new operator that join us today",
-                "[member] is the new valkyries, time to fight!"
-        };
-
-        Random rand = new Random();
-        int number = rand.nextInt(messages.length);
-
-        return messages[number];
     }
 }

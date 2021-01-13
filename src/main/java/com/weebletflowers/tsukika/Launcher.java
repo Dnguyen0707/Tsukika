@@ -57,7 +57,7 @@ public class Launcher extends ListenerAdapter
         builder.setHelpWord("sendhelp");
         builder.setOwnerId(ownerID);
         builder.setPrefix("-");
-        builder.setAlternativePrefix(";");
+        builder.setAlternativePrefix("/");
 
         //add commmands
         commands();

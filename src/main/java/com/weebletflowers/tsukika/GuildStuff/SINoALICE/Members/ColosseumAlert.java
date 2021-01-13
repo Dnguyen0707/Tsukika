@@ -40,7 +40,6 @@ public class ColosseumAlert extends Command
                 "*Starts banging the war drum*, [member] get on!!!",
                 "We need you [member]! Get on!",
                 "[member], let's beat the enemy team! Get on!"
-
         };
 
         Random rand = new Random();
@@ -48,4 +47,5 @@ public class ColosseumAlert extends Command
 
         return messages[number];
     }
+
 }
