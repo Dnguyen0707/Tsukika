@@ -29,7 +29,7 @@ public class Join extends Command
             event.getGuild().addRoleToMember(user, role).complete();
 
             //if user is from the SinoAlice guild
-            if (event.getArgs().equals("SinoAlice"))
+            if (event.getArgs().equalsIgnoreCase("SinoAlice"))
             {
 
                 List<Role> guildrole = FinderUtil.findRoles("SinoAlice Member", event.getGuild());
@@ -42,6 +42,9 @@ public class Join extends Command
             {
                 event.reply("Welcome to the Weeblet Hanabusa " + event.getAuthor().getAsMention() + "!");
             }
+            String userID = String.valueOf(user);
+            //call hinoka
+            event.reply("=allyou " + userID);
         }
         else
         {
