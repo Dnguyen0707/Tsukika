@@ -18,7 +18,7 @@ public class PrinconneNormalGacha
         EmbedBuilder firstmessage = new EmbedBuilder();
         firstmessage.setColor(Color.green);
         firstmessage.setTitle("First Normal Gacha");
-        firstmessage.setAuthor("Karin", null, null);
+        firstmessage.setAuthor("Karin", null, "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Karin.png");
         firstmessage.setDescription("Your first daily gear is now available, let me help you carry it into the guild house");
 
         Notification
@@ -30,7 +30,7 @@ public class PrinconneNormalGacha
         EmbedBuilder secondmessage = new EmbedBuilder();
         secondmessage.setColor(Color.green);
         secondmessage.setTitle("Second Normal Gacha");
-        secondmessage.setAuthor("Karin", null, null);
+        secondmessage.setAuthor("Karin", null, "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Karin.png");
         secondmessage.setDescription("Your second daily gear is now available, let me help you carry it into the guild house");
 
         Notification

@@ -14,7 +14,7 @@ public class SinoaliceDailyReset
         EmbedBuilder message = new EmbedBuilder();
         message.setColor(Color.white);
         message.setTitle("Daily Reset");
-        message.setAuthor("Snow White", null, null);
+        message.setAuthor("Snow White", null, "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/SINoALICE/Snow%20White.png");
         message.setDescription("Everything have been reset, but not justice");
 
         //5AM
