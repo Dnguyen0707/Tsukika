@@ -3,6 +3,7 @@ import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.jagrosh.jdautilities.commons.utils.FinderUtil;
 import net.dv8tion.jda.api.entities.Role;
+import net.dv8tion.jda.api.entities.TextChannel;
 
 import java.util.List;
 
@@ -28,23 +29,30 @@ public class Join extends Command
             Role role = found.get(0);
             event.getGuild().addRoleToMember(user, role).complete();
 
-            //if user is from the SinoAlice guild
+            //search for from-guild channel
+            TextChannel fromguild = event.getGuild()
+                    .getTextChannelsByName("from-guild", true).get(0);
+
+            //if user is from certain game guild
             if (event.getArgs().equalsIgnoreCase("SinoAlice"))
             {
-
-                List<Role> guildrole = FinderUtil.findRoles("SinoAlice Member", event.getGuild());
-                Role SAMember = guildrole.get(0);
-                event.getGuild().addRoleToMember(user, SAMember).complete();
-
-                event.reply(event.getAuthor().getAsMention() + " is the new SinoAlice member that join us today");
+                //send message to from-guild channel
+                fromguild.sendMessage(event.getAuthor().getAsMention() + " came from **SinoAlice**").complete();
             }
-            else
+            //from Honkai Impact
+            else if(event.getArgs().equalsIgnoreCase(" HonkaiImpact"))
             {
-                event.reply("Welcome to the Weeblet Hanabusa " + event.getAuthor().getAsMention() + "!");
+                //send message to from-guild channel
+                fromguild.sendMessage(event.getAuthor().getAsMention() + " came from **Honkai Impact**").complete();
             }
-            String userID = String.valueOf(user);
-            //call hinoka
-            event.reply("=allyou " + userID);
+            //from Azur Lane
+            else if(event.getArgs().equalsIgnoreCase("AzurLane"))
+            {
+                //send message to from-guild channel
+                fromguild.sendMessage(event.getAuthor().getAsMention() + " came from **Azur Lane**").complete();
+            }
+
+            event.reply("Welcome to the Weeblet Hanabusa " + event.getAuthor().getAsMention() + "!");
         }
         else
         {
