@@ -1,6 +1,9 @@
 package com.weebletflowers.tsukika.GachaGameStuff;
+import com.weebletflowers.tsukika.GachaGameStuff.AzurLane.AzurLaneDailyReset;
+import com.weebletflowers.tsukika.GachaGameStuff.GenshinImpact.GenshinDailyReset;
+import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.HonkaiDailyReset;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneDailyReset;
-import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PrinconneNormalGacha;
+import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneNormalGacha;
 import com.weebletflowers.tsukika.GachaGameStuff.SINoALICE.SinoaliceDailyReset;
 import net.dv8tion.jda.api.entities.Guild;
 public class NotificationRunner
@@ -10,18 +13,18 @@ public class NotificationRunner
     {
         //Princonne
         PriconneDailyReset.run(guild);
-        PrinconneNormalGacha.run(guild);
+        PriconneNormalGacha.run(guild);
 
         //Azur Lane
+        AzurLaneDailyReset.run(guild);
 
-
-        //Genshin
-
+        //GenshinImpact
+        //GenshinDailyReset.run(guild);
 
         //SinoAlice
         SinoaliceDailyReset.run(guild);
 
         //Honkai
-        //will need to read day for other day related notification
+        //HonkaiDailyReset.run(guild);
     }
 }

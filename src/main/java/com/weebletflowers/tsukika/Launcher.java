@@ -77,7 +77,7 @@ public class Launcher extends ListenerAdapter
         jda.addEventListener(client);
         jda.addEventListener(waiter);
 
-        //Gacha rest notification TODO still testing
+        //Gacha rest notification
 //        Guild guild = jda.getGuildById("773361373794402324");   //BETA
         Guild guild = jda.getGuildById("728455513532006491");   //Main
 

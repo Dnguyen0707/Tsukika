@@ -21,6 +21,7 @@ public class Join extends Command
     {
         if (event.getChannel().getName().equalsIgnoreCase("new-members"))
         {
+
             long user = event.getAuthor().getIdLong();
             event.getMessage().delete().complete();
 

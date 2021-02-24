@@ -11,11 +11,12 @@ public class PriconneDailyReset
     public static void run(Guild guildID)
     {
         TextChannel textChannel = guildID.getTextChannelsByName("priconne-alert", true).get(0);
+        String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Normal_Pecorine.png?raw=true";
 
         EmbedBuilder message = new EmbedBuilder();
         message.setColor(Color.orange);
         message.setTitle("Daily Reset");
-        message.setAuthor("Pecorine", null, "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Normal_Pecorine.png");
+        message.setAuthor("Pecorine", null, iconURL);
         message.setDescription("Daily have been reset. How crazy is that!?");
 
         //1pm
