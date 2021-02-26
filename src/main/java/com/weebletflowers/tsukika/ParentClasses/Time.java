@@ -5,7 +5,7 @@ import org.joda.time.DateTimeZone;
 
 public class Time
 {
-    //check for current time in 24hrs format
+    //check for current time in 24hrs format UTC
     public static boolean timeCheck(int hour, int minute)
     {
         DateTime currentTime = new DateTime(DateTimeZone.forID("UTC"));

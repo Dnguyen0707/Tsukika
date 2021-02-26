@@ -10,7 +10,7 @@ public class SinoaliceDailyReset
     public static void run(Guild guildID)
     {
         TextChannel textChannel = guildID.getTextChannelsByName("sinoalice-alert", true).get(0);
-        String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/SINoALICE/Snow%20White.png?raw=true";
+        String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/SINoALICE/Snow_White.png?raw=true";
 
         EmbedBuilder message = new EmbedBuilder();
         message.setColor(Color.white);

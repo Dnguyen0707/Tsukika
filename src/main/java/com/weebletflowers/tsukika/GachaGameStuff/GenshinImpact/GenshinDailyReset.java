@@ -7,20 +7,20 @@ import net.dv8tion.jda.api.entities.TextChannel;
 import java.awt.*;
 public class GenshinDailyReset
 {
-    public static void run(Guild guildID)   //TODO double check
+    public static void run(Guild guildID)   //TODO change quote
     {
         TextChannel textChannel = guildID.getTextChannelsByName("genshinimpact-alert", true).get(0);
-        String iconURL = "";
+        String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/GenshinImpact/Ganyu.png?raw=true";
 
-        //NA 10:00 UTC
+        //NA 10:00 UTC   TODO: Daytime saving so it's 9
         EmbedBuilder message1 = new EmbedBuilder();
         message1.setColor(Color.blue);
         message1.setTitle("Daily Reset for NA");
         message1.setAuthor("Ganyu", null, iconURL);
-        message1.setDescription("");
+        message1.setDescription("I finished all my dailies today. ...M-More? I understand. I'll get right on the case");
 
         Notification
-                notificationNA = new Notification(guildID, textChannel, 10, message1);
+                notificationNA = new Notification(guildID, textChannel, 9, message1);
         notificationNA.run();
 
         //Asia 20:00 UTC
@@ -28,7 +28,7 @@ public class GenshinDailyReset
         message2.setColor(Color.blue);
         message2.setTitle("Daily Reset for Asia");
         message2.setAuthor("Ganyu", null, iconURL);
-        message2.setDescription("");
+        message2.setDescription("I finished all my dailies today. ...M-More? I understand. I'll get right on the case");
 
         Notification
                 notificationAsia = new Notification(guildID, textChannel, 20, message2);
@@ -39,7 +39,7 @@ public class GenshinDailyReset
         message3.setColor(Color.blue);
         message3.setTitle("Daily Reset for EU");
         message3.setAuthor("Ganyu", null, iconURL);
-        message3.setDescription("");
+        message3.setDescription("I finished all my dailies today. ...M-More? I understand. I'll get right on the case");
 
         Notification
                 notificationEU = new Notification(guildID, textChannel, 3, message3);
