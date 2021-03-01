@@ -26,7 +26,7 @@ public class Join extends Command
             event.getMessage().delete().complete();
 
             //Add Seedlet
-            List<Role> found = FinderUtil.findRoles("Weeblet Seedlet", event.getGuild());
+            List<Role> found = FinderUtil.findRoles("Member", event.getGuild());
             Role role = found.get(0);
             event.getGuild().addRoleToMember(user, role).complete();
 

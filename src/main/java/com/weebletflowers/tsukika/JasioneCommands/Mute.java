@@ -16,7 +16,7 @@ public class Mute extends Command
     {
         this.name = "Mute";
         this.arguments = "<Member>";
-        this.requiredRole = "Weeblet Jasione";
+        this.requiredRole = "Jasione";
         this.hidden = true;
     }
 
