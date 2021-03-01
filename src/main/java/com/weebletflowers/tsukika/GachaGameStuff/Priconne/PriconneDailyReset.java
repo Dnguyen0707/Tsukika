@@ -14,7 +14,7 @@ public class PriconneDailyReset
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Normal_Pecorine.png?raw=true";
 
         EmbedBuilder message = new EmbedBuilder();
-        message.setColor(Color.orange);
+        message.setColor(Color.getHSBColor(29, 76,82));
         message.setTitle("Daily Reset");
         message.setAuthor("Pecorine", null, iconURL);
         message.setDescription("Daily have been reset. How crazy is that!?");

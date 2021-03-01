@@ -10,13 +10,13 @@ public class PriconneBonusShop
     public static void run(Guild guildID)
     {
         TextChannel textChannel = guildID.getTextChannelsByName("priconne-alert", true).get(0);
-        String iconURL = "https://raw.githubusercontent.com/Dnguyen0707/Tsukika/master/src/main/resources/GachaNotificationIcon/Priconne/Karin.png";
+        String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Kyaru_Normal.png?raw=true";
 
         EmbedBuilder message = new EmbedBuilder();
-        message.setColor(Color.green);
+        message.setColor(Color.getHSBColor(287,76,73));
         message.setTitle("Bonus Shop reset");
-        message.setAuthor("Karin", null, iconURL);
-        message.setDescription("Bonus shop have been reset, go on an adventure and it should be ready");
+        message.setAuthor("Kyaru", null, iconURL);
+        message.setDescription("I");
 
 
         Notification notification = new Notification(guildID, textChannel, 12,59, message);

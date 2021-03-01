@@ -15,7 +15,7 @@ public class AzurLaneDailyReset
 
         //7AM UTC
         EmbedBuilder message = new EmbedBuilder();
-        message.setColor(Color.red);
+        message.setColor(Color.getHSBColor(0, 100,47));
         message.setTitle("Daily Reset");
         message.setAuthor("Bismarck", null, iconURL);
         message.setDescription("Everything have been reset. I have expectations of you as well.");

@@ -14,7 +14,7 @@ public class GenshinDailyReset
 
         //NA 10:00 UTC   TODO: Daytime saving so it's 9
         EmbedBuilder message1 = new EmbedBuilder();
-        message1.setColor(Color.blue);
+        message1.setColor(Color.getHSBColor(181,84,75));
         message1.setTitle("Daily Reset for NA");
         message1.setAuthor("Ganyu", null, iconURL);
         message1.setDescription("I finished all my dailies today. ...M-More? I understand. I'll get right on the case");
@@ -25,7 +25,7 @@ public class GenshinDailyReset
 
         //Asia 20:00 UTC
         EmbedBuilder message2 = new EmbedBuilder();
-        message2.setColor(Color.blue);
+        message2.setColor(Color.getHSBColor(181,84,75));
         message2.setTitle("Daily Reset for Asia");
         message2.setAuthor("Ganyu", null, iconURL);
         message2.setDescription("I finished all my dailies today. ...M-More? I understand. I'll get right on the case");
@@ -36,7 +36,7 @@ public class GenshinDailyReset
 
         //EU 3:00 UTC
         EmbedBuilder message3 = new EmbedBuilder();
-        message3.setColor(Color.blue);
+        message3.setColor(Color.getHSBColor(181,84,75));
         message3.setTitle("Daily Reset for EU");
         message3.setAuthor("Ganyu", null, iconURL);
         message3.setDescription("I finished all my dailies today. ...M-More? I understand. I'll get right on the case");

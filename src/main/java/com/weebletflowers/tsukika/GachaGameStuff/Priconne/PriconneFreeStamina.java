@@ -11,14 +11,14 @@ public class PriconneFreeStamina
     {
         TextChannel textChannel =
                 guildID.getTextChannelsByName("priconne-alert", true).get(0);
-        String iconURL = "";
+        String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Kokkoro_Normal.png?raw=true";
 
         //2 AM
         EmbedBuilder firstmessage = new EmbedBuilder();
         firstmessage.setColor(Color.green);
         firstmessage.setTitle("First Free Stamina");
-        firstmessage.setAuthor("Karin", null, iconURL);
-        firstmessage.setDescription("Your first free stamina is now available");
+        firstmessage.setAuthor("Kokkoro", null, iconURL);
+        firstmessage.setDescription("My lord, let's go explore");
 
         Notification
                 firstNotification =
@@ -29,8 +29,8 @@ public class PriconneFreeStamina
         EmbedBuilder secondmessage = new EmbedBuilder();
         secondmessage.setColor(Color.green);
         secondmessage.setTitle("Second Free Stamina");
-        secondmessage.setAuthor("Karin", null, iconURL);
-        secondmessage.setDescription("Your second free stamina is now available");
+        secondmessage.setAuthor("Kokkoro", null, iconURL);
+        secondmessage.setDescription("My lord, I'm looking forward to assisting you");
 
         Notification
                 secondNotification =
