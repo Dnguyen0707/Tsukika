@@ -11,9 +11,10 @@ public class HonkaiCommissionReset
     {
         TextChannel textChannel = guildID.getTextChannelsByName("honkaiimpact-alert", true).get(0);
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/HonkaiImpact/Himeko.png?raw=true";
+        Color himekoCol = new Color(224, 61, 36);
 
         EmbedBuilder message = new EmbedBuilder();
-        message.setColor(Color.getHSBColor(0, 80, 70));
+        message.setColor(himekoCol);
         message.setTitle("Commission Reset");
         message.setAuthor("Himeko", null, iconURL);
         message.setDescription("Daily Commission have been reset");

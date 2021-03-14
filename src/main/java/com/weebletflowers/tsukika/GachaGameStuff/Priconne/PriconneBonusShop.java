@@ -11,12 +11,13 @@ public class PriconneBonusShop
     {
         TextChannel textChannel = guildID.getTextChannelsByName("priconne-alert", true).get(0);
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/Priconne/Kyaru_Normal.png?raw=true";
+        Color kyaruCol = new Color(152, 38, 181);
 
         EmbedBuilder message = new EmbedBuilder();
-        message.setColor(Color.getHSBColor(287,76,73));
+        message.setColor(kyaruCol);
         message.setTitle("Bonus Shop reset");
         message.setAuthor("Kyaru", null, iconURL);
-        message.setDescription("I");
+        message.setDescription("I wanna buy more personal item!");
 
 
         Notification notification = new Notification(guildID, textChannel, 12,59, message);

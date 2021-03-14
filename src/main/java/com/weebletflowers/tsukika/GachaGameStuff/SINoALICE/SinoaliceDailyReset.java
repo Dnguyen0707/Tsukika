@@ -11,9 +11,10 @@ public class SinoaliceDailyReset
     {
         TextChannel textChannel = guildID.getTextChannelsByName("sinoalice-alert", true).get(0);
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/SINoALICE/Snow_White.png?raw=true";
+        Color snowCol = new Color(255, 245, 245);
 
         EmbedBuilder message = new EmbedBuilder();
-        message.setColor(Color.white);
+        message.setColor(snowCol);
         message.setTitle("Daily Reset");
         message.setAuthor("Snow White", null, iconURL);
         message.setDescription("Everything have been reset, but not justice");

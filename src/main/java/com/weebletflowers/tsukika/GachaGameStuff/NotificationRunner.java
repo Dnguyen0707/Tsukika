@@ -7,7 +7,9 @@ import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneBonusShop;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneDailyReset;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneFreeStamina;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneNormalGacha;
+import com.weebletflowers.tsukika.GachaGameStuff.SINoALICE.SinoaliceConquest;
 import com.weebletflowers.tsukika.GachaGameStuff.SINoALICE.SinoaliceDailyReset;
+import com.weebletflowers.tsukika.GachaGameStuff.SINoALICE.SinoaliceGuerrilla;
 import net.dv8tion.jda.api.entities.Guild;
 public class NotificationRunner
 {
@@ -15,7 +17,7 @@ public class NotificationRunner
     public NotificationRunner(Guild guild)
     {
         //Princonne
-        PriconneDailyReset.run(guild);
+        PriconneDailyReset.run(guild);  //NA EU Asia
         PriconneNormalGacha.run(guild);
         PriconneBonusShop.run(guild);
         PriconneFreeStamina.run(guild);
@@ -23,11 +25,13 @@ public class NotificationRunner
         //Azur Lane
         AzurLaneDailyReset.run(guild);
 
-        //GenshinImpact
-        GenshinDailyReset.run(guild);
+        //Genshin
+        GenshinDailyReset.run(guild);  //NA EU Asia
 
         //SinoAlice
         SinoaliceDailyReset.run(guild);
+        SinoaliceGuerrilla.run(guild);
+        SinoaliceConquest.run(guild);
 
         //Honkai
         HonkaiDailyReset.run(guild);

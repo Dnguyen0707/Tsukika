@@ -13,10 +13,11 @@ public class PriconneNormalGacha
         TextChannel textChannel =
                 guildID.getTextChannelsByName("priconne-alert", true).get(0);
         String iconURL = "https://raw.githubusercontent.com/Dnguyen0707/Tsukika/master/src/main/resources/GachaNotificationIcon/Priconne/Karin.png";
+        Color karinCol = new Color(16, 171, 14);
 
         //1pm
         EmbedBuilder firstmessage = new EmbedBuilder();
-        firstmessage.setColor(Color.green);
+        firstmessage.setColor(karinCol);
         firstmessage.setTitle("First Normal Gacha");
         firstmessage.setAuthor("Karin", null, iconURL);
         firstmessage.setDescription("Your first daily gear is now available, let me help you carry it into the guild house");
@@ -28,7 +29,7 @@ public class PriconneNormalGacha
 
         //8pm
         EmbedBuilder secondmessage = new EmbedBuilder();
-        secondmessage.setColor(Color.green);
+        secondmessage.setColor(karinCol);
         secondmessage.setTitle("Second Normal Gacha");
         secondmessage.setAuthor("Karin", null, iconURL);
         secondmessage.setDescription("Your second daily gear is now available, let me help you carry it into the guild house");

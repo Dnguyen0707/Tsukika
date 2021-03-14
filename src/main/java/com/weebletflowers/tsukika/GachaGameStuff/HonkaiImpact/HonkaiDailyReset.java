@@ -11,10 +11,11 @@ public class HonkaiDailyReset
     {
         TextChannel textChannel = guildID.getTextChannelsByName("honkaiimpact-alert", true).get(0);
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/HonkaiImpact/Seele.png?raw=true";
+        Color seeleCol = new Color(115, 59, 227);
 
         //NA 9:00 UTC   TODO: Daytime saving so it's 9
         EmbedBuilder message1 = new EmbedBuilder();
-        message1.setColor(Color.getHSBColor(286, 56, 68));
+        message1.setColor(seeleCol);
         message1.setTitle("Daily Reset for NA");
         message1.setAuthor("Seele", null, iconURL);
         message1.setDescription("Always felt like there was a voice in my mind, telling me daily reset happened");
@@ -25,7 +26,7 @@ public class HonkaiDailyReset
 
         //Asia 20:00 UTC
         EmbedBuilder message2 = new EmbedBuilder();
-        message2.setColor(Color.getHSBColor(286, 56, 68));
+        message2.setColor(seeleCol);
         message2.setTitle("Daily Reset for Asia");
         message2.setAuthor("Seele", null, iconURL);
         message2.setDescription("Always felt like there was a voice in my mind, telling me daily reset happened");
@@ -36,7 +37,7 @@ public class HonkaiDailyReset
 
         //EU 3:00 UTC
         EmbedBuilder message3 = new EmbedBuilder();
-        message3.setColor(Color.getHSBColor(286, 56, 68));
+        message3.setColor(seeleCol);
         message3.setTitle("Daily Reset for EU");
         message3.setAuthor("Seele", null, iconURL);
         message3.setDescription("Always felt like there was a voice in my mind, telling me daily reset happened");

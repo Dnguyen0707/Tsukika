@@ -12,10 +12,11 @@ public class AzurLaneDailyReset
         TextChannel textChannel =
                 guildID.getTextChannelsByName("azurlane-alert", true).get(0);
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/AzurLane/Bismarck.png?raw=true";
+        Color bismarckCol = new Color(122, 0, 0);
 
         //7AM UTC
         EmbedBuilder message = new EmbedBuilder();
-        message.setColor(Color.getHSBColor(0, 100,47));
+        message.setColor(bismarckCol);
         message.setTitle("Daily Reset");
         message.setAuthor("Bismarck", null, iconURL);
         message.setDescription("Everything have been reset. I have expectations of you as well.");
