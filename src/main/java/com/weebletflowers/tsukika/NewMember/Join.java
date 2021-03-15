@@ -34,25 +34,27 @@ public class Join extends Command
             TextChannel fromguild = event.getGuild()
                     .getTextChannelsByName("from-guild", true).get(0);
 
+            long authorID = event.getAuthor().getIdLong();
+            String authorMention = "<!@" + authorID + ">";
+
             //if user is from certain game guild
             if (event.getArgs().equalsIgnoreCase("SinoAlice"))
             {
                 //send message to from-guild channel
-                fromguild.sendMessage(event.getAuthor().getAsMention() + " came from **SinoAlice**").complete();
+                fromguild.sendMessage(authorMention + " came from **SinoAlice**").complete();
             }
             //from Honkai Impact
             else if(event.getArgs().equalsIgnoreCase(" HonkaiImpact"))
             {
                 //send message to from-guild channel
-                fromguild.sendMessage(event.getAuthor().getAsMention() + " came from **Honkai Impact**").complete();
+                fromguild.sendMessage(authorMention + " came from **Honkai Impact**").complete();
             }
             //from Azur Lane
             else if(event.getArgs().equalsIgnoreCase("AzurLane"))
             {
                 //send message to from-guild channel
-                fromguild.sendMessage(event.getAuthor().getAsMention() + " came from **Azur Lane**").complete();
+                fromguild.sendMessage(authorMention + " came from **Azur Lane**").complete();
             }
-
             event.reply("Welcome to the Weeblet Hanabusa " + event.getAuthor().getAsMention() + "!");
         }
         else
