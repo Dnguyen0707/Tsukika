@@ -3,11 +3,13 @@ package com.weebletflowers.tsukika;
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
-import com.weebletflowers.tsukika.GachaGameStuff.NotificationRunner;
+import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.Subleader.HonkaiGiveTag;
+import com.weebletflowers.tsukika.ParentClasses.NotificationRunner;
 import com.weebletflowers.tsukika.NewMember.Join;
 import com.weebletflowers.tsukika.JasioneCommands.Mute;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -82,6 +84,8 @@ public class Launcher extends ListenerAdapter
         Guild guild = jda.getGuildById("728455513532006491");   //Main
 
         new NotificationRunner(guild);
+
+        jda.getPresence().setActivity(Activity.playing("1.1.3"));  //remember to switch this with build.gradle
     }
 
     private static void commands()
@@ -98,7 +102,7 @@ public class Launcher extends ListenerAdapter
 
         //Gacha game stuff
         builder.addCommands(
-
+                new HonkaiGiveTag()
         );
 
         //Jasione Commands

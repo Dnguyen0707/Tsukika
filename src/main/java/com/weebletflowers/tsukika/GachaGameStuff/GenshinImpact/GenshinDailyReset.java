@@ -13,7 +13,7 @@ public class GenshinDailyReset
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/GenshinImpact/Ganyu.png?raw=true";
         Color ganyuCol = new Color(68, 177, 227);
 
-        //NA 10:00 UTC   TODO: Daytime saving so it's 9
+        //NA 9:00 UTC
         EmbedBuilder message1 = new EmbedBuilder();
         message1.setColor(ganyuCol);
         message1.setTitle("Daily Reset for NA");

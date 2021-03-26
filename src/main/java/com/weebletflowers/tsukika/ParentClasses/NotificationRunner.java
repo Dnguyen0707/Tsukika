@@ -1,15 +1,12 @@
-package com.weebletflowers.tsukika.GachaGameStuff;
+package com.weebletflowers.tsukika.ParentClasses;
 import com.weebletflowers.tsukika.GachaGameStuff.AzurLane.AzurLaneDailyReset;
 import com.weebletflowers.tsukika.GachaGameStuff.GenshinImpact.GenshinDailyReset;
-import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.HonkaiCommissionReset;
-import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.HonkaiDailyReset;
+import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.HonkaiNotification.HonkaiCommissionReset;
+import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.HonkaiNotification.HonkaiDailyReset;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneBonusShop;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneDailyReset;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneFreeStamina;
 import com.weebletflowers.tsukika.GachaGameStuff.Priconne.PriconneNormalGacha;
-import com.weebletflowers.tsukika.GachaGameStuff.SINoALICE.SinoaliceConquest;
-import com.weebletflowers.tsukika.GachaGameStuff.SINoALICE.SinoaliceDailyReset;
-import com.weebletflowers.tsukika.GachaGameStuff.SINoALICE.SinoaliceGuerrilla;
 import net.dv8tion.jda.api.entities.Guild;
 public class NotificationRunner
 {
@@ -27,11 +24,6 @@ public class NotificationRunner
 
         //Genshin
         GenshinDailyReset.run(guild);  //NA EU Asia
-
-        //SinoAlice
-        SinoaliceDailyReset.run(guild);
-        SinoaliceGuerrilla.run(guild);
-        SinoaliceConquest.run(guild);
 
         //Honkai
         HonkaiDailyReset.run(guild);

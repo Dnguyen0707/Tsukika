@@ -1,4 +1,4 @@
-package com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact;
+package com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.HonkaiNotification;
 import com.weebletflowers.tsukika.ParentClasses.Notification;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
@@ -13,7 +13,7 @@ public class HonkaiDailyReset
         String iconURL = "https://github.com/Dnguyen0707/Tsukika/blob/master/src/main/resources/GachaNotificationIcon/HonkaiImpact/Seele.png?raw=true";
         Color seeleCol = new Color(115, 59, 227);
 
-        //NA 9:00 UTC   TODO: Daytime saving so it's 9
+        //NA 9:00 UTC
         EmbedBuilder message1 = new EmbedBuilder();
         message1.setColor(seeleCol);
         message1.setTitle("Daily Reset for NA");

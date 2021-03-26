@@ -1,4 +1,4 @@
-package com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact;
+package com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.HonkaiNotification;
 import com.weebletflowers.tsukika.ParentClasses.Notification;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
