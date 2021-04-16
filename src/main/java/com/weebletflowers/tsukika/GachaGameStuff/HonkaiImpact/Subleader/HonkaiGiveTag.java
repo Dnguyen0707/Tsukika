@@ -11,7 +11,6 @@ public class HonkaiGiveTag extends Command
     public HonkaiGiveTag()
     {
         this.name = "HonkaiGiveTag";
-        this.help = "Accepting the rules";
         this.arguments = "member";
         this.requiredRole = "Honkai Impact Vice Leader";
         this.hidden = true;

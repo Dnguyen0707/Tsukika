@@ -7,6 +7,7 @@ import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.Subleader.HonkaiGi
 import com.weebletflowers.tsukika.ParentClasses.NotificationRunner;
 import com.weebletflowers.tsukika.NewMember.Join;
 import com.weebletflowers.tsukika.JasioneCommands.Mute;
+import com.weebletflowers.tsukika.UserCommands.TurnOnAlert;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -31,7 +32,7 @@ public class Launcher extends ListenerAdapter
             throws LoginException
     {
         //readToken
-        File tokenFile = new File("Tsukika Key.txt");   //Beta: False
+        File tokenFile = new File("Tsukika Key.txt");
         String token = "";
         String ownerID = "";
 
@@ -80,12 +81,11 @@ public class Launcher extends ListenerAdapter
         jda.addEventListener(waiter);
 
         //Gacha rest notification
-//        Guild guild = jda.getGuildById("773361373794402324");   //BETA
         Guild guild = jda.getGuildById("728455513532006491");   //Main
 
         new NotificationRunner(guild);
 
-        jda.getPresence().setActivity(Activity.playing("1.1.3"));  //remember to switch this with build.gradle
+        jda.getPresence().setActivity(Activity.playing("1.2.0"));  //TODO remember to switch this with build.gradle
     }
 
     private static void commands()
@@ -97,7 +97,7 @@ public class Launcher extends ListenerAdapter
 
         //User Command
         builder.addCommands(
-
+                new TurnOnAlert()
         );
 
         //Gacha game stuff
