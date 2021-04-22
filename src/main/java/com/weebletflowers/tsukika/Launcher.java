@@ -7,6 +7,7 @@ import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.Subleader.HonkaiGi
 import com.weebletflowers.tsukika.ParentClasses.NotificationRunner;
 import com.weebletflowers.tsukika.NewMember.Join;
 import com.weebletflowers.tsukika.JasioneCommands.Mute;
+import com.weebletflowers.tsukika.GachaGameStuff.HonkaiImpact.Commands.HonkaiGoT;
 import com.weebletflowers.tsukika.UserCommands.TurnOnAlert;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -85,7 +86,7 @@ public class Launcher extends ListenerAdapter
 
         new NotificationRunner(guild);
 
-        jda.getPresence().setActivity(Activity.playing("1.2.0"));  //TODO remember to switch this with build.gradle
+        jda.getPresence().setActivity(Activity.playing("1.3.0"));  //TODO remember to switch this with build.gradle
     }
 
     private static void commands()
@@ -102,7 +103,8 @@ public class Launcher extends ListenerAdapter
 
         //Gacha game stuff
         builder.addCommands(
-                new HonkaiGiveTag()
+                new HonkaiGiveTag(),
+                new HonkaiGoT()
         );
 
         //Jasione Commands

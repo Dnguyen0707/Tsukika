@@ -5,6 +5,7 @@ import com.jagrosh.jdautilities.commons.utils.FinderUtil;
 import net.dv8tion.jda.api.entities.Role;
 
 import java.util.List;
+import java.util.Locale;
 public class TurnOnAlert extends Command
 {
     public TurnOnAlert()
@@ -32,10 +33,9 @@ public class TurnOnAlert extends Command
             String leak;
             String code;
 
-
             switch (event.getArgs().toLowerCase())
             {
-                case "AzurLane":
+                case "azurlane":
                     found = FinderUtil.findRoles("Azur Lane Info Receiver", event.getGuild());
                     role = found.get(0);
                     event.getGuild().addRoleToMember(user, role).complete();
@@ -44,7 +44,7 @@ public class TurnOnAlert extends Command
 
                     event.reply("Role updated, please check " + alert + " and " + news + " for your good stuff");
                     break;
-                case "HonkaiImpact":
+                case "honkaiimpact":
                     found = FinderUtil.findRoles("Honkai Info Receiver", event.getGuild());
                     role = found.get(0);
                     event.getGuild().addRoleToMember(user, role).complete();
@@ -55,7 +55,7 @@ public class TurnOnAlert extends Command
 
                     event.reply("Role updated, please check " + alert + ", " + news + ", " + leak + " and " + code + " for your good stuff");
                     break;
-                case "GenshinImpact":
+                case "genshinimpact":
                     found = FinderUtil.findRoles("Genshin Info Receiver", event.getGuild());
                     role = found.get(0);
                     event.getGuild().addRoleToMember(user, role).complete();
@@ -66,7 +66,7 @@ public class TurnOnAlert extends Command
 
                     event.reply("Role updated, please check " + alert + ", " + news + ", " + leak + " and " + code + " for your good stuff");
                     break;
-                case "Priconne":
+                case "priconne":
                     found = FinderUtil.findRoles("Priconne Info Receiver", event.getGuild());
                     role = found.get(0);
                     event.getGuild().addRoleToMember(user, role).complete();
