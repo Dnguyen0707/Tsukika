@@ -7,7 +7,7 @@ import java.awt.*;
 public class HonkaiGoT extends Command
 {
     //update as the game update
-    private final String gameVersion = "4.6";
+    private final String gameVersion = "4.7";
 
     public HonkaiGoT()
     {
@@ -70,7 +70,7 @@ public class HonkaiGoT extends Command
     }
 
     /**
-     * @Version 4.6
+     * @Version 4.7
      * */
     private enum Glossary
     {
@@ -103,10 +103,7 @@ public class HonkaiGoT extends Command
         BN("Black Nucleus", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/59/Black_Nucleus.png/revision/latest?cb=20180805051258"),
         HoR("Herrscher of Reason", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/0/0a/Herrscher_of_Reason.png/revision/latest?cb=20190810032309"),
         WD("Wolf's Dawn", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/d/d1/Wolf%27s_Dawn.png/revision/latest?cb=20180805172721"),
-        //ASSUME
-        HB("Haxxor Bunny", ""),
-        //ASSUME
-        Haxx("Haxxor Bunny", ""),
+        HB("Haxxor Bunny", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/52/Haxxor_Bunny.png/revision/latest?cb=20210425235137"),
 
         //Himeko
         BS("Battle Storm", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/2/2b/Battle_Storm.png/revision/latest?cb=20180521031258"),
@@ -174,10 +171,6 @@ public class HonkaiGoT extends Command
         BK("Bright Knight: Excelsis", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5c/Bright_Knight_-_Excelsis.png/revision/latest?cb=20200516194711"),
         BKE("Bright Knight: Excelsis", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/5/5c/Bright_Knight_-_Excelsis.png/revision/latest?cb=20200516194711"),
         DA("Dea Anchora", "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/1/17/Dea_Anchora.png/revision/latest?cb=20210131005204"),
-
-
-        //Open World
-        APHO("Post-Honkai Odyssey", ""),    //TODO need picture
 
         ;
         //constructor
